@@ -1,0 +1,134 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Resource
+        
+    </ion-title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.js"></script>
+  </ion-toolbar>
+</ion-header>
+
+  <div #expandWrapper class='expand-wrapper' [class.collapsed]="!expanded">
+  <ng-content></ng-content>
+</div>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-header translucent>
+  </ion-header>
+
+  <ion-content fullscreen>
+
+       <!-- fab placed to the top end -->
+     <ion-fab vertical="top" horizontal="end" slot="fixed">
+       <ion-fab-button>
+         <ion-icon name="add"></ion-icon>
+       </ion-fab-button>
+     </ion-fab>
+
+
+
+
+
+
+     
+    <ion-card (click)="expandItem(item)" *ngFor="let item of items">
+      <ion-card-header>
+        <ion-card-title>Buisness</ion-card-title>
+      </ion-card-header>
+  
+      <ion-card-content>
+        <app-expandable expandHeight="100px" [expanded]="item.expanded">
+          <p>
+            I've got enough on my plate as it is, and I...
+          </p>
+        
+        </app-expandable>
+      </ion-card-content>
+    </ion-card>
+
+
+
+
+    <ion-card (click)="expandItem(item)" *ngFor="let item of ice">
+      <ion-card-header>
+        <ion-card-title>Bill Neye</ion-card-title>
+      </ion-card-header>
+  
+      <ion-card-content>
+        <app-expandable expandHeight="100px" [expanded]="item.expanded">
+          <p>
+           Here is a program i found useful about being a pediatrician. i've been in the program for 3 years and i have found it helpful because they provide useful information and gives you an advantage so you can apply in the medical field. And they will give you a recomendation if you want to apply in thsat hospital because you have participated in the program.
+          </p>
+          
+        </app-expandable>
+      </ion-card-content>
+    </ion-card>
+
+
+
+
+    <ion-card (click)="expandItem(item)" *ngFor="let item of pan">
+      <ion-card-header>
+        <ion-card-title>Vivtor</ion-card-title>
+      </ion-card-header>
+  
+      <ion-card-content>
+        <app-expandable expandHeight="100px" [expanded]="item.expanded">
+          <p>
+            My name is Victor Guerra.
+          </p>
+          
+        </app-expandable>
+      </ion-card-content>
+    </ion-card>
+
+
+    <ion-card (click)="expandItem(item)" *ngFor="let item of fish">
+      <ion-card-header>
+        <ion-card-title>Robert </ion-card-title>
+      </ion-card-header>
+  
+      <ion-card-content>
+        <app-expandable expandHeight="100px" [expanded]="item.expanded">
+          <p>
+            My name is Robert from dog with the blog.
+          </p>
+          
+        </app-expandable>
+      </ion-card-content>
+    </ion-card>
+
+      <ion-card (click)="expandItem(item)" *ngFor="let item of dog">
+      <ion-card-header>
+        <ion-card-title>David </ion-card-title>
+      </ion-card-header>
+  
+      <ion-card-content>
+        <app-expandable expandHeight="100px" [expanded]="item.expanded">
+          <p>
+            I play Football.
+          </p>
+          
+        </app-expandable>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card (click)="expandItem(item)" *ngFor="let item of snake">
+      <ion-card-header>
+        <ion-card-title>Derick</ion-card-title>
+      </ion-card-header>
+  
+      <ion-card-content>
+        <app-expandable expandHeight="100px" [expanded]="item.expanded">
+          <p>
+            Here is a program i found useful about being a pediatrician. i've been in the program for 3 years and i have found it helpful because they provide useful information and gives you an advantage so you can apply in the medical field. And they will give you a recomendation if you want to apply in thsat hospital because you have participated in the program.
+          </p>
+          
+        </app-expandable>
+      </ion-card-content>
+    </ion-card>
+
+    
+

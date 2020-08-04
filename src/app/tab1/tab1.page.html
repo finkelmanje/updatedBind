@@ -1,0 +1,127 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home   
+    </ion-title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.js"></script>
+  </ion-toolbar>
+</ion-header>
+
+  <div #expandWrapper class='expand-wrapper' [class.collapsed]="!expanded">
+  <ng-content></ng-content>
+</div>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-header translucent>
+  </ion-header>
+
+  <ion-content fullscreen>
+
+    <ion-card (click)="expandItem(item)" *ngFor="let item of items">
+      <ion-card-header>
+        <ion-card-title>Arlette Moran</ion-card-title>
+      </ion-card-header>
+  
+      <ion-card-content>
+        <app-expandable expandHeight="100px" [expanded]="item.expanded">
+          <p>
+           My dream career is to be a pediatrician, a registered nures, and a veternarian. One of my favoritye hobbies are playimg fortnite, playing the piano, and i like going out.  
+          </p>
+        
+        </app-expandable>
+      </ion-card-content>
+    </ion-card>
+
+
+
+
+    <ion-card (click)="expandItem(item)" *ngFor="let item of ice">
+      <ion-card-header>
+        <ion-card-title> Billy Baker</ion-card-title>
+        <img src="./assets/football.jpg" width="300px" height="200px" float-righ>
+      </ion-card-header>
+  
+      <ion-card-content>
+        <app-expandable expandHeight="100px" [expanded]="item.expanded">
+          <p>
+            Little Bill likes to work with Bill Neye.
+          </p>
+          
+        </app-expandable>
+      </ion-card-content>
+    </ion-card>
+
+
+
+
+    <ion-card (click)="expandItem(item)" *ngFor="let item of pan">
+      <ion-card-header>
+        <ion-card-title>Jason Parker</ion-card-title>
+        <img class ="boy"src="./assets/guy.jpg" width="200px" height="200px" float-righ>
+      </ion-card-header>
+  
+      <ion-card-content>
+        <app-expandable expandHeight="100px" [expanded]="item.expanded">
+          <p>
+           Hello my name is Jason Parker I go to Dimsdail high school. One of my favorite hobbies 
+          </p>
+          
+        </app-expandable>
+      </ion-card-content>
+    </ion-card>
+
+
+    <ion-card (click)="expandItem(item)" *ngFor="let item of fish">
+      <ion-card-header>
+        <ion-card-title>Alan Vasquez </ion-card-title>
+        <img src="./assets/bigstock-Male-High-School-Student-At-De-62222351.jpg" width="200px" height="100px" float-righ>
+      </ion-card-header>
+  
+      <ion-card-content>
+        <app-expandable expandHeight="100px" [expanded]="item.expanded">
+          <p>
+            My name is Alan from dog with the blog.
+          </p>
+        
+        </app-expandable>
+      </ion-card-content>
+    </ion-card>
+
+      <ion-card (click)="expandItem(item)" *ngFor="let item of dog">
+      <ion-card-header>
+        <ion-card-title>Ben Soliz </ion-card-title>
+        <img src="./assets/Unknown.jpg" width="300px" height="200px" float-righ>
+      </ion-card-header>
+  
+      <ion-card-content>
+        <app-expandable expandHeight="100px" [expanded]="item.expanded">
+          <p>
+            I play Soccer .
+          </p>
+          
+        </app-expandable>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card (click)="expandItem(item)" *ngFor="let item of snake">
+      <ion-card-header>
+        <ion-card-title>Soul Sanchez</ion-card-title>
+        <img src="./assets/rock.jpg" width="200px" height="210px" float-righ>
+      </ion-card-header>
+  
+      <ion-card-content>
+        <app-expandable expandHeight="100px" [expanded]="item.expanded">
+          <p>
+            I love adventuring and like going to intresting places.
+          </p>
+          
+        </app-expandable>
+
+        
+      </ion-card-content>
+    </ion-card>
+
+    
+
