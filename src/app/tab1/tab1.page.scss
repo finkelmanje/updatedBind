@@ -6,10 +6,10 @@ ion-card-content{
 }
 ion-card-header{
 
-        background-color: blueviolet;
+        background-color: white;
 }
 ion-card-title{
-    color: white;
+    color: black;
 }
  .boy img {
     width: auto;
@@ -17,4 +17,7 @@ ion-card-title{
     float: right;
     height: auto;
     max-height: 100%;
+}
+ion-title{
+    font-size: 30px !important;
 }

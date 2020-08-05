@@ -4,6 +4,7 @@
       Resource
         
     </ion-title>
+    
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.js"></script>
   </ion-toolbar>
@@ -25,13 +26,25 @@
        <ion-fab-button>
          <ion-icon name="add"></ion-icon>
        </ion-fab-button>
+       
+  <ion-fab-list side="bottom">
+    <ion-fab-button>
+      <ion-icon name="logo-github"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button>
+      <ion-icon name="logo-javascript"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button>
+      <ion-icon name="logo-angular"></ion-icon>
+    </ion-fab-button>
+  </ion-fab-list>
      </ion-fab>
 
 
 
 
 
-
+     <!-- cards start here -->
      
     <ion-card (click)="expandItem(item)" *ngFor="let item of items">
       <ion-card-header>
@@ -129,6 +142,8 @@
         </app-expandable>
       </ion-card-content>
     </ion-card>
+    
+    
 
     
 
