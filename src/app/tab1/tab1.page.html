@@ -14,8 +14,10 @@
   <ng-content></ng-content>
 </div>
 
+
 <ion-content [fullscreen]="true">
   
+  <div class="image"></div>
   <ion-header translucent>
   </ion-header>
 
@@ -41,14 +43,17 @@
 
     <ion-card (click)="expandItem(item)" *ngFor="let item of ice">
       <ion-card-header>
-        <ion-card-title> Billy Baker</ion-card-title>      
-            </ion-card-header>
-            
-        <img src="./assets/football.jpg" width="300px" height="200px" float-righ>
-   
+        <ion-card-title> Billy Baker</ion-card-title>    
+        <!-- <ion-avatar >
+  <img src="./assets/football.jpg">
+</ion-avatar> -->
+
+
+<img class="circle-pic"  src="./assets/football.jpg" width="200px" height="200px" float-righ>
     
-  
-      <ion-card-content>
+
+            </ion-card-header>
+          <ion-card-content>
         <app-expandable expandHeight="100px" [expanded]="item.expanded">
           <p>
             Little Bill likes to work with Bill Neye.
@@ -64,6 +69,9 @@
     <ion-card (click)="expandItem(item)" *ngFor="let item of pan">
       <ion-card-header>
         <ion-card-title>Jason Parker</ion-card-title>
+        <ion-avatar slot="start">
+          <img src="./assets/guy.jpg">
+        </ion-avatar>
         <img class ="boy"src="./assets/guy.jpg" width="200px" height="200px" float-righ>
       </ion-card-header>
   
@@ -126,6 +134,7 @@
 
         
       </ion-card-content>
+      
     </ion-card>
 
     
