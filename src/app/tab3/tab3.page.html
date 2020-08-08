@@ -1,10 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <center> <img src="./assets/Group 1.png"></center>
+      <center> <img src="./assets/Group 1.png"></center>
     <ion-title>  </ion-title>
     
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@next/dist/ionic/ionic.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="styles.css">
   </ion-toolbar>
 </ion-header>
 
@@ -43,89 +46,27 @@
 
 
      <!-- cards start here -->
-     
-    <ion-card (click)="expandItem(item)" *ngFor="let item of items">
-      <ion-card-header>
-        <ion-card-title>Buisness</ion-card-title>
-      </ion-card-header>
-  
-      <ion-card-content>
-        <app-expandable expandHeight="100px" [expanded]="item.expanded">
-          <p>
-            I've got enough on my plate as it is, and I...
-          </p>
-        
-        </app-expandable>
-      </ion-card-content>
-    </ion-card>
+     <h1>Post</h1>
+
+        <div class="content">
+          <form id="add-cafe-form">
+              <input type="text" name="name" placeholder="name">
+              <input type="text" name="post" placeholder="describe">
+              <button>Add</button>
+          </form>
+          <ul id="cafe-list"></ul>
 
 
 
 
-    <ion-card (click)="expandItem(item)" *ngFor="let item of ice">
-      <ion-card-header>
-        <ion-card-title>Bill Neye</ion-card-title>
-      </ion-card-header>
-  
-      <ion-card-content>
-        <app-expandable expandHeight="100px" [expanded]="item.expanded">
-          <p>
-           Here is a program i found useful about being a pediatrician. i've been in the program for 3 years and i have found it helpful because they provide useful information and gives you an advantage so you can apply in the medical field. And they will give you a recomendation if you want to apply in thsat hospital because you have participated in the program.
-          </p>
-          
-        </app-expandable>
-      </ion-card-content>
-    </ion-card>
+    
 
 
 
+    
+    
 
-    <ion-card (click)="expandItem(item)" *ngFor="let item of pan">
-      <ion-card-header>
-        <ion-card-title>Vivtor</ion-card-title>
-      </ion-card-header>
-  
-      <ion-card-content>
-        <app-expandable expandHeight="100px" [expanded]="item.expanded">
-          <p>
-            My name is Victor Guerra.
-          </p>
-          
-        </app-expandable>
-      </ion-card-content>
-    </ion-card>
-
-
-    <ion-card (click)="expandItem(item)" *ngFor="let item of fish">
-      <ion-card-header>
-        <ion-card-title>Robert </ion-card-title>
-      </ion-card-header>
-  
-      <ion-card-content>
-        <app-expandable expandHeight="100px" [expanded]="item.expanded">
-          <p>
-            My name is Robert from dog with the blog.
-          </p>
-          
-        </app-expandable>
-      </ion-card-content>
-    </ion-card>
-
-      <ion-card (click)="expandItem(item)" *ngFor="let item of dog">
-      <ion-card-header>
-        <ion-card-title>David </ion-card-title>
-      </ion-card-header>
-  
-      <ion-card-content>
-        <app-expandable expandHeight="100px" [expanded]="item.expanded">
-          <p>
-            I play Football.
-          </p>
-          
-        </app-expandable>
-      </ion-card-content>
-    </ion-card>
-
+      
     <ion-card (click)="expandItem(item)" *ngFor="let item of snake">
       <ion-card-header>
         <ion-card-title>Derick</ion-card-title>
@@ -139,6 +80,24 @@
           
         </app-expandable>
       </ion-card-content>
+
+
+  <script>
+  // Your web app's Firebase configuration
+      var firebaseConfig = {
+         apiKey: "AIzaSyDPfZXEjeTLEgItZuysxNt00xqmuPPB8tM",
+        authDomain: "bind-project.firebaseapp.com",
+        databaseURL: "https://bind-project.firebaseio.com",
+        projectId: "bind-project",
+        storageBucket: "bind-project.appspot.com",
+        messagingSenderId: "956206633182",
+        appId: "1:956206633182:web:6830022d8df47013cdb24f",
+        measurementId: "G-VHPP4L6Y8B"
+  };
+  firebase.initializeApp(config);
+            const db = firebase.firestore();
+            db.settings({ timestampsInSnapshots: true }); 
+</script>
     </ion-card>
     
     

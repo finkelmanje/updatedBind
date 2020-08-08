@@ -1,28 +1,3 @@
-let app = require('express')();
-let server = require('http').createServer(app);
-let io = require('socket.io')(server);
- 
-io.on('connection', (socket) => {
- 
-  socket.on('disconnect', function(){
-    io.emit('users-changed', {user: socket.username, event: 'left'});   
-  });
- 
-  socket.on('set-name', (name) => {
-    socketSocketusername = name;
-    io.emit('users-changed', {user: name, event: 'joined'});    
-  });
-  
-  socket.on('send-message', (message) => {
-    io.emit('message', {msg: message.text, user: socket.username, createdAt: new Date()});    
-  });
-});
- 
-var port = process.env.PORT || 3001;
- 
-server.listen(port, function(){
-   console.log('listening in http://localhost:' + port);
-});
 const cafeList = document.querySelector('#cafe-list');
 const form = document.querySelector('#add-cafe-form');
 
@@ -30,16 +5,16 @@ const form = document.querySelector('#add-cafe-form');
 function renderCafe(doc){
     let li = document.createElement('li');
     let name = document.createElement('span');
-    let city = document.createElement('span');
+    let post = document.createElement('span');
     let cross = document.createElement('div');
 
     li.setAttribute('data-id', doc.id);
     name.textContent = doc.data().name;
-    city.textContent = doc.data().city;
+    city.textContent = doc.data().post;
     cross.textContent = 'x';
 
     li.appendChild(name);
-    li.appendChild(city);
+    li.appendChild(post);
     li.appendChild(cross);
 
     cafeList.appendChild(li);
@@ -67,11 +42,11 @@ form.addEventListener('submit', (e) => {
         city: form.city.value
     });
     form.name.value = '';
-    form.city.value = '';
+    form.post.value = '';
 });
 
 // real-time listener
-db.collection('cafes').orderBy('city').onSnapshot(snapshot => {
+db.collection('cafes').orderBy('posr').onSnapshot(snapshot => {
     let changes = snapshot.docChanges();
     changes.forEach(change => {
         console.log(change.doc.data());
