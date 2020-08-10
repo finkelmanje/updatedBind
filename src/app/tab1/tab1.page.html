@@ -22,13 +22,25 @@
   </ion-header>
 
   <ion-content fullscreen>
-
+    <center>
+    <ion-list-header >
+     Home Page
+    </ion-list-header>
+    </center>
     <ion-card (click)="expandItem(item)" *ngFor="let item of items">
       <ion-card-header>
-        <ion-card-title>Alex Peric</ion-card-title>
-        <ion-avatar class="ion-margin-start">
-          <img src="./assets/Unknown.jpg">
-        </ion-avatar>
+      
+        <ion-item>
+          <ion-avatar slot="start">
+            <img  src="./assets/Basketball.jpg">
+          </ion-avatar>
+          <ion-label>
+            <h2>J'quan</h2>
+            <p>Future pediatricion</p>
+           
+          </ion-label>
+        </ion-item>
+
       </ion-card-header>
   
       <ion-card-content>
@@ -46,10 +58,18 @@
 
     <ion-card (click)="expandItem(item)" *ngFor="let item of ice">
       <ion-card-header>
-        <ion-card-title> Billy Baker</ion-card-title>    
-        <ion-avatar class="ion-margin-start">
-          <img src="./assets/football.jpg">
-        </ion-avatar>
+       
+          
+        <ion-item>
+          <ion-avatar slot="start">
+            <img  src="./assets/football.jpg">
+          </ion-avatar>
+          <ion-label>
+            <h2>Bill Baker</h2>
+            <p>Football Player</p>
+           
+          </ion-label>
+        </ion-item>
 
 
 
@@ -67,16 +87,21 @@
 
 
 
-
+<!-- Jason Parer -->
     <ion-card (click)="expandItem(item)" *ngFor="let item of pan">
       <ion-card-header>
-        <ion-card-title>Jason Parker</ion-card-title>
-      <ion-avatar class="ion-margin-start">
-        <img src="./assets/guy.jpg">
-      </ion-avatar>
-    </ion-card-header>
-  
-      <ion-card-content>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img  src="./assets/guy.jpg">
+          </ion-avatar>
+          <ion-label>
+            <h2>Jason Parker</h2>
+            <p>Future scientist</p>
+           
+          </ion-label>
+        </ion-item>
+   </ion-card-header>
+   <ion-card-content>
         <app-expandable expandHeight="100px" [expanded]="item.expanded">
           <p>
            Hello my name is Jason Parker I go to Dimsdail high school. One of my favorite hobbies 
@@ -85,14 +110,21 @@
         </app-expandable>
       </ion-card-content>
     </ion-card>
-
-
+<!-- Alan  Vasquez -->
     <ion-card (click)="expandItem(item)" *ngFor="let item of fish">
       <ion-card-header>
-        <ion-card-title>Alan Vasquez </ion-card-title>
-        <ion-avatar class="ion-margin-start">
-          <img src="./assets/bigstock-Male-High-School-Student-At-De-62222351.jpg">
-        </ion-avatar>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img  src="./assets/bigstock-Male-High-School-Student-At-De-62222351.jpg">
+          </ion-avatar>
+          <ion-label>
+            <h2>Alan Vasquez</h2>
+            <p>Future Filmer</p>
+           
+          </ion-label>
+        </ion-item>
+
+
         
       </ion-card-header>
   
@@ -105,16 +137,24 @@
         </app-expandable>
       </ion-card-content>
     </ion-card>
-
+<!-- Ben Soliz -->
       <ion-card (click)="expandItem(item)" *ngFor="let item of dog">
       <ion-card-header>
-        <ion-card-title>Ben Soliz </ion-card-title>
-        <ion-avatar class="ion-margin-start">
-          <img src="./assets/Unknown.jpg">
-        </ion-avatar>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img  src=" ./assets/Unknown.jpg">
+          </ion-avatar>
+          <ion-label>
+            <h2>Ben Soliz</h2>
+            <p>Future soccer player</p>
+           
+          </ion-label>
+        </ion-item>
+
+
         
       </ion-card-header>
-  
+ 
       <ion-card-content>
         <app-expandable expandHeight="100px" [expanded]="item.expanded">
           <p>
@@ -124,16 +164,24 @@
         </app-expandable>
       </ion-card-content>
     </ion-card>
-
+<!-- Soul Sanchez -->
     <ion-card (click)="expandItem(item)" *ngFor="let item of snake">
       <ion-card-header>
-        <ion-card-title>Soul Sanchez</ion-card-title>
-        <ion-avatar class="ion-margin-start">
-          <img src="./assets/rock.jpg">
-        </ion-avatar>
+     <ion-item>
+          <ion-avatar slot="start">
+            <img  src=" ./assets/rock.jpg">
+          </ion-avatar>
+          <ion-label>
+            <h2>Soul Sanchez</h2>
+            <p>Future zookeeper</p>
+           
+          </ion-label>
+        </ion-item>
+
+
       
       </ion-card-header>
-  
+ 
       <ion-card-content>
         <app-expandable expandHeight="100px" [expanded]="item.expanded">
           <p>
