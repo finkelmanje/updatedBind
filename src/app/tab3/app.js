@@ -23,21 +23,21 @@ function renderCafe(doc){
     cross.addEventListener('click', (e) => {
         e.stopPropagation();
         let id = e.target.parentElement.getAttribute('data-id');
-        db.collection('cafes').doc(id).delete();
+        db.collection('post').doc(id).delete();
     });
 }
 
 // getting data
-// db.collection('cafes').orderBy('city').get().then(snapshot => {
-//     snapshot.docs.forEach(doc => {
-//         renderCafe(doc);
-//     });
-// });
+ db.collection('post').orderBy('post').get().then(snapshot => {
+    snapshot.docs.forEach(doc => {
+         renderCafe(doc);
+    });
+ });
 
 // saving data
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    db.collection('cafes').add({
+    db.collection('post').add({
         name: form.name.value,
         city: form.city.value
     });
