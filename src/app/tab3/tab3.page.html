@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-      <center> <img src="./assets/Group 1.png"></center>
+    <center> <img style="width: 157.32px; height: 105.48px;" src="./assets/logo.png"></center>
    
     
    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
@@ -71,7 +71,16 @@
   };
   firebase.initializeApp(config);
             const db = firebase.firestore();
-            db.settings({ timestampsInSnapshots: true }); 
+            db.settings({ timestampsInSnapshots: true });
+            
+            // Firebase App (the core Firebase SDK) is always required and
+// must be listed before other Firebase SDKs
+var firebase = require("firebase/app");
+
+// Add the Firebase products that you want to use
+require("firebase/auth");
+require("firebase/firestore");
+
 </script>
     
     
