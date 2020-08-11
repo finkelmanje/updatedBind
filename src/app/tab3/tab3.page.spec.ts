@@ -23,5 +23,4 @@ describe('Tab3Page', () => {
     expect(component).toBeTruthy();
   });
 });
-import { Component } from "@angular/core";
 

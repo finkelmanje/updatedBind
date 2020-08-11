@@ -3,9 +3,9 @@
     <center> <img style="width: 157.32px; height: 105.48px;" src="./assets/logo.png"></center>
    
     
-   <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+   <!-- <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> -->
   </ion-toolbar>
 </ion-header>
 
@@ -23,13 +23,18 @@
 
         <div class="content">
           <form id="add-cafe-form">
-              <input type="text" name="name" placeholder="name">
-              <input type="text" name="post" placeholder="describe">
-              <button>Add</button>
+              <input type="text" name="name" [(ngModel)]="myname" placeholder="name">
+              <input type="text" name="post" [(ngModel)]="mydescribe" placeholder="describe">
+              <button (click) = 'plate()' >Add</button>
+           
               <ul id="cafe-list"></ul>
 
           </form>
           </div>
+          <ion-card *ngFor="let post of data">
+           
+          <p>{{post.name}}: {{post.describe}}</p>
+          </ion-card>
                    
 
 
@@ -57,7 +62,7 @@
       </ion-card-content>
 
 
-  <script>
+  <!-- <script>
   // Your web app's Firebase configuration
       var firebaseConfig = {
          apiKey: "AIzaSyDPfZXEjeTLEgItZuysxNt00xqmuPPB8tM",
@@ -81,7 +86,7 @@ var firebase = require("firebase/app");
 require("firebase/auth");
 require("firebase/firestore");
 
-</script>
+</script> -->
     
     
     
