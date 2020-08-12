@@ -9,6 +9,10 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { RouterModule } from '@angular/router';
+
+import { ExpandableComponent } from "./component/expandable/expandable.component";
+
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
  
@@ -16,7 +20,7 @@ const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,  SocketIoModule.forRoot(config)] ,
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,  SocketIoModule.forRoot(config), RouterModule] ,
   providers: [
     StatusBar,
     SplashScreen,

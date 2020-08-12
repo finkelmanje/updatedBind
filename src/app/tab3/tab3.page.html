@@ -9,9 +9,6 @@
   </ion-toolbar>
 </ion-header>
 
-  <div #expandWrapper class='expand-wrapper' [class.collapsed]="!expanded">
-  <ng-content></ng-content>
-</div>
 
 <ion-content [fullscreen]="true">
 
@@ -49,8 +46,8 @@
     
     
 
-      
-    <ion-card (click)="expandItem(item)" *ngFor="let item of snake">
+      <!-- will need to import expandable component -->
+    <!-- <ion-card (click)="expandItem(item)" *ngFor="let item of snake">
       <ion-card-header>
         <ion-card-title></ion-card-title>
       </ion-card-header>
@@ -62,7 +59,7 @@
           </p>
           
         </app-expandable>
-      </ion-card-content>
+      </ion-card-content> -->
 
 
   <!-- <script>

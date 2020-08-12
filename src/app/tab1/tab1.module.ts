@@ -1,5 +1,5 @@
 import { IonicModule } from '@ionic/angular';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab1Page } from './tab1.page';
@@ -16,9 +16,11 @@ import { ExpandableComponent } from "../component/expandable/expandable.componen
     FormsModule,
     ExploreContainerComponentModule,
     Tab1PageRoutingModule
-  ],
+    ],
 
   
-  declarations: [Tab1Page, ExpandableComponent]
+  declarations: [Tab1Page, ExpandableComponent],
+  schemas: [NO_ERRORS_SCHEMA]
+
 })
 export class Tab1PageModule {}
