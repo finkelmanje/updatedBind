@@ -40,3 +40,11 @@
   ion-back-button{
     --color:blue;
   }
+
+  ion-footer{
+    display: flex;
+    align-items: flex-end;
+    margin: auto; 
+    padding-top: .5em;
+    padding-bottom: .5em;
+  }
